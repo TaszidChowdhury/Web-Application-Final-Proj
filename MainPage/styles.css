@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+
+}
+
+#FUNI-logo {
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+
+    justify-content: space-between;
+    align-items: left;
+    padding: 1.5rem;
+    background-color: #282828;
+    color: white;
+}
+
+a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #333;
+}
+
+ul.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+ul.dropdown li {
+    display: inline-block;
+}
+
+ul.dropdown li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+ul.dropdown ul {
+    float: right;
+    display: none;
+    position: relative;
+    background-color: #282828;
+}
+
+ul.dropdown ul li {
+    display: block;
+}
+
+ul.dropdown:hover ul {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    position: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
