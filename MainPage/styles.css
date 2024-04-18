@@ -13,6 +13,13 @@ body {
 #FUNI-logo {
     position: absolute;
     top: 0;
+
+}
+
+#FUNI-logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 40px;
 }
 
 nav {
@@ -86,4 +93,3 @@ h1 {
     grid-gap: 1rem;
     padding: 1rem;
 }
-
