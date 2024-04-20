@@ -1,46 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>LOGIN</title>
     <link rel="stylesheet" href="log-reg.css">
 </head>
-    
-    <body>
-        <div>
-            <form action="action.php" method="post">
-          
-                <div>
-
-                  <br>
-    
-                  <label for="user-name">Username</label>
-    
-                  <input type="text" placeholder="Enter Username" name="username" required>
-              
-                  <br><br><br>
-
-                  <label for="pass">Password</label>
-    
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                  <br><br><br><br>
-
-                  <button class="log-in1" type="submit">Login</button>
-            
-                </div>
-    
-              </form>
-        </div>
-
-
-
-
-
-
-
-
-    </body>
+<body>
+    <nav>
+        <a href="../User Login-Registration/register.html">Sign Up</a>
+        <a href="../User Login-Registration/login.html">Log In</a>
+    </nav>
+    <a href="../HomePage/index.html" id="FUNI-logo"><img src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
+    <div>
+        <form action="action.php" method="post">
+            <div>
+                <br>
+                <label for="user-name">Username</label>
+                <input type="text" placeholder="Enter Username" name="username" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).*$" title="Username must have at least one uppercase letter, one number, and no spaces." required>
+                <br><br><br>
+                <label for="pass">Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" minlength="8" maxlength="24" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$" title="Password must be between 8-24 characters, containing at least one uppercase letter, one number, and no spaces." required>
+                <br><br><br><br>
+                <button class="firstlog-in" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
 </html>
