@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>REGISTER</title>
-    <link rel="stylesheet" href="log-reg.css">
-</head>
-<body>
-  <nav>
-    <a href="../User Login-Registration/register.html">Sign Up</a>
-    <a href="../User Login-Registration/login.html">Log In</a>
-  </nav>
-  <a href="../HomePage/index.html" id="FUNI-logo"><img src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
-    <form action="action.php" method="post" id="registration-form">
-        <div class="register-background">
-            <br>
-            <label for="user-name">Username</label>
-            <input type="text" placeholder="Enter Username" name="username" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).*$" title="Username must have at least one uppercase letter, one number, and no spaces." required>
-            <br><br><br>
-            <label for="pass">Password</label>
-            <input type="password" placeholder="Enter Password" id="password" name="password" minlength="8" maxlength="24" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$" title="Password must be between 8-24 characters, containing at least one uppercase letter, one number, and no spaces." required>
-            <br><br>
-            <label for="confirm-pass">Confirm Password</label>
-            <input type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" required>
-            <br><br>
-            <label for="Email">Email</label>
-            <input type="email" placeholder="Enter Email Address" name="email" required>
-            <br><br><br><br>
-            <button class="secondlog-in" type="submit">Login</button>
-        </div>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <title>REGISTER</title>
+        <link rel="stylesheet" href="log-reg.css">
+    </head>
+    <body>
+        <nav>
+            <a href="../HomePage/index.html" id="FUNI-logo"><h1>FUNI</h1><img
+                    src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
+            <div class="nav-links">
+                <a href="../User Login-Registration/register.html">Sign Up</a>
+                <a href="../User Login-Registration/login.html">Log
+                    In</a>
+            </div>
+        </nav>
+        <form action="action.php" method="post" id="registration-form">
+            <div class="register-background">
+                <label for="user-name">Username</label>
+                <input type="text" placeholder="Enter Username" name="username"
+                    minlength="8" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).*$"
+                    title="Username must have at least one uppercase letter, one number, and no spaces."
+                    required>
+                <label for="pass">Password</label>
+                <input type="password" placeholder="Enter Password"
+                    id="password" name="password" minlength="8" maxlength="24"
+                    pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$"
+                    title="Password must be between 8-24 characters, containing at least one uppercase letter, one number, and no spaces."
+                    required>
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password"
+                    id="confirm-password" name="confirm-password" required>
+                <label for="Email">Email</label>
+                <input type="email" placeholder="Enter Email Address"
+                    name="email" required>
+                <button class="signup-button" type="submit">Register</button>
+            </div>
+        </form>
 
-    <script>
+        <script>
         document.getElementById('registration-form').addEventListener('submit', function(event) {
 
             var password = document.getElementById('password').value;
@@ -47,5 +55,5 @@
 
         });
     </script>
-</body>
+    </body>
 </html>

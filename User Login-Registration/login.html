@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="log-reg.css">
-</head>
-<body>
-    <nav>
-        <a href="../User Login-Registration/register.html">Sign Up</a>
-        <a href="../User Login-Registration/login.html">Log In</a>
-    </nav>
-    <a href="../HomePage/index.html" id="FUNI-logo"><img src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
-    <div>
-        <form action="action.php" method="post">
-            <div>
-                <br>
-                <label for="user-name">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).*$" title="Username must have at least one uppercase letter, one number, and no spaces." required>
-                <br><br><br>
-                <label for="pass">Password</label>
-                <input type="password" placeholder="Enter Password" name="psw" minlength="8" maxlength="24" pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$" title="Password must be between 8-24 characters, containing at least one uppercase letter, one number, and no spaces." required>
-                <br><br><br><br>
-                <button class="firstlog-in" type="submit">Login</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Login</title>
+        <link rel="stylesheet" href="log-reg.css">
+    </head>
+    <body>
+        <nav>
+            <a href="../HomePage/index.html" id="FUNI-logo"><h1>FUNI</h1><img
+                    src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
+            <div class="nav-links">
+                <a href="../User Login-Registration/register.html">Sign Up</a>
+                <a href="../User Login-Registration/login.html">Log
+                    In</a>
             </div>
-        </form>
-    </div>
-</body>
+        </nav>
+        <div>
+            <form autocomplete="off" action="action.php" method="post"
+                id="registration-form">
+                <div class="registration-login">
+                    <h1>Sign in to get started</h1>
+                    <div class="username-login">
+                        <input type="text" placeholder=" " id="username"
+                            name="username" minlength="8"
+                            pattern="^(?=.*[A-Z])(?!.*\s).*$"
+                            title="Username must have at least one uppercase letter, and no spaces."
+                            spellcheck="false"
+                            required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="password-login">
+                        <input type="password" placeholder=" " id="password"
+                            name="psw" minlength="8" maxlength="24"
+                            pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$"
+                            title="Password must be between 8-24 characters, containing at least one uppercase letter, one number, and no spaces."
+                            required>
+                        <label for="psw">Password</label>
+                        <p>Don't have an account yet?&#160<a
+                                href="../User Login-Registration/register.html"
+                                class="register-acc">Click here to register
+                                now!</a></p>
+                        <button class="login-button" type="submit">Sign
+                            In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>

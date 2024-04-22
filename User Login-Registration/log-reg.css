@@ -1,47 +1,173 @@
 #FUNI-logo {
-    position: absolute;
-    top: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
+
+#FUNI-logo h1 {
+    margin-right: .5rem;
+    font-size: 1.25rem;
+}
+
 #FUNI-logo img {
-    width: 45px;
-    height: 45px;
-    border-radius: 40px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
 }
+
+#FUNI-logo:hover {
+    cursor: pointer;
+    color: #2596be;
+    transition: all 0.8s ease;
+}
+
 nav {
-    display: block;
-    text-decoration: none;
-    text-align: right;
+    display: flex;
     justify-content: space-between;
-    align-items: left;
-    padding: 1rem;
-    background-color: #282828;
+    align-items: center;
+    padding: .80rem;
+    background-color: rgba(40, 40, 40, 0.9);
     color: white;
 }
-a {
-    padding: 1rem;
-    color: white;
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+.nav-links a {
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
-a:hover {
-    background-color: #333;
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #2596be;
 }
 
 /* end of nav bar */
 
-div{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 29px;
-    color: ghostwhite;
-    word-spacing: 1.5px;
-    width: 450px;
-    height: 240px;
-    border-radius: 10px;
-    background-color: black;
+body {
+    background-color: ghostwhite;
+    font-family: sans-serif, helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-login {
+    margin-top: 6.5rem;
+    height: 43.5rem;
+    width: 40rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    border-radius: 30px;
+    background-color: #454141;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 #989696;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
+
+.registration-login h1 {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-top: 7rem;
+    font-weight: lighter
+}
+
+.registration-login p {
+    font-size: 1rem;
+    color: whitesmoke;
+    margin-top: 1rem;
+    font-weight: lighter;
+
+}
+
+.registration-login input {
+    width: 75%;
+    padding: .75rem;
+    margin: 3rem;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: border-color 0.3s ease;
+}
+
+.registration-login input:focus {
+    border-color: #2596be;
+}
+
+.registration-login .username-login,
+.registration-login .password-login {
+    position: relative;
+    font-size: 1.25rem;
+    
+}
+
+.registration-login label {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: #eaeaea;
+    
+}
+
+.registration-login input:focus + label,
+.registration-login input:not(:placeholder-shown) + label {
+    font-size: 1.5rem;
+    color: #2596be;
+   
+}
+
+a.register-acc {
+    color: white;
+    text-decoration: underline;
+    background-color: transparent;
+    padding: 0;
+    bottom: 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+a.register-acc:hover {
+    color: #2596be;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    font-family: sans-serif, helvetica;
+    background-color: #2596be;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    width: 20rem;
+    height: 2.5rem;
+    transition: 0.3s ease;
+}
+
+.login-button:hover {
+    color: white;
+    background-color: #1a6985;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transform: scale(1.2);
+}
+
 .register-background{
     background-color: ghostwhite;
     border: 4px solid black;
@@ -50,17 +176,7 @@ div{
     height: 350px;
     color: black;
 }
-.firstlog-in{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: -20px;
-    background-color: ghostwhite;
-    border: 4.25px solid black;
-    border-radius: 10px;
-    font-size: 29px;
-    text-align: center;
-    width: 100px;
-    height: 45px;
-}
+
 .secondlog-in{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: ghostwhite;
@@ -70,3 +186,6 @@ div{
     width: 80px;
     height: 35px;
 }
+
+
+
