@@ -1,16 +1,21 @@
+body{
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    background-size: 15%;
+    
+}
 div{
     font-family: sans-serif, helvetica;
     font-size: 18px;
-    padding: 30px;
     color: whitesmoke;
     background-color: #454141;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
-    border: 2px solid #333;
+    padding: 2px;
     border-radius: 10px;
-    width: 30rem;
+    width: 31rem;
     box-shadow: #454141 0px 54px 55px, #454141 0px -12px 30px, #454141 0px 4px 6px,  #454141 0px 12px 13px, #454141 0px -3px 5px;
 
 }
@@ -31,4 +36,5 @@ h1:hover{
     height: 20px;
     background-color: whitesmoke;
     border-radius: 10px;
+    margin-bottom: 40px;
 }

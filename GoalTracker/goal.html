@@ -3,48 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRACKER</title>
+    <title>Tracker</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
-<body>
+<body style="background-image: url('background.jpg');">
 <div>
     <h1>Savings Goal Tracker</h1>
-
-    <br><br>
-
     <form>
-
-        <label for="goal-amount">Current Goal: $</label>
-        <input type="number" class="currentgoal" id="currentgoal" name="currentgoal" required>
-
-        <br><br><br>
-
-        <label for="current-amount">Current Savings: $</label>
-        <input type="number" class="currentsavings" id="currentsavings" name="currentsavings" required>
-
-        <br><br><br>
-
-        <label for="add-amount">Add Savings: $</label>
-        <input type="number" class="addsavings" id="addsavings" name="addsavings" min=1 required>
-
-        <br><br><br>
-
+        <div class="form-group">
+            <label for="goal-amount">Current Goal: $</label>
+            <input type="number" class="currentgoal" id="currentgoal" name="currentgoal" required>
+        </div>
+        <div class="form-group">
+            <label for="current-amount">Current Savings: $</label>
+            <input type="number" class="currentsavings" id="currentsavings" name="currentsavings" required>
+        </div>
+        <div class="form-group">
+            <label for="add-amount">Add Savings: $</label>
+            <input type="number" class="addsavings" id="addsavings" name="addsavings" min=1 required>
+        </div>
+        <div class="submit-button">
         <button type="submit">Update</button>
-
-        <br><br><br>
-
-        <label for="progress">Goal Completion:</label>
-        <progress class="completionbar" id="completionbar" value="0" max="100"></progress>
-
-        <br><br><br>
-
+        </div>
+        <div class="form-group">
+            <label for="progress">Goal Completion:</label>
+            <progress class="completionbar" id="completionbar" value="0" max="100"></progress>
+        </div>
     </form>
-
+    <script>
+        const form = document.querySelector('form');
+        const currentgoal = document.querySelector('.currentgoal');
+        const currentsavings = document.querySelector('.currentsavings');
+        const addsavingsfromchecking = document.querySelector('.addsavings');
+        const progressbar = document.querySelector('.completionbar');
+    
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const goal = parseFloat(currentgoal.value);
+            const savings = parseFloat(currentsavings.value);
+            const add = parseFloat(addsavingsfromchecking.value);
+            const total = savings + add;
+            const percent = Math.min((total / goal) * 100, 100);
+            
+            if (percent >= 100){
+                currentgoal.value = 0;
+                progressbar.value = 0;
+                alert("Goal achieved!");
+            } 
+            else{
+                progressbar.value = percent;
+            }
+            
+            currentsavings.value = total;
+        });
+    </script>
+    
 </div>
-
 </body>
-
-
 </html>
