@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRACKER</title>
-    <link rel="stylesheet" href="styles.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goal Tracker</title>
+        <link rel="stylesheet" href="styles.css">
 
-</head>
+    </head>
 
-<body>
-<div>
-    <h1>Savings Goal Tracker</h1>
+    <body>
+        <div>
+            <h1>Savings Goal Tracker</h1>
 
-    <br><br>
+            <br><br>
 
-    <form>
+            <form>
 
-        <label for="goal-amount">Current Goal: $</label>
-        <input type="number" class="currentgoal" id="currentgoal" name="currentgoal" required>
+                <label for="goal-amount">Current Goal: $</label>
+                <input type="number" class="currentgoal" id="currentgoal"
+                    name="currentgoal" required>
 
-        <br><br><br>
+                <br><br><br>
 
-        <label for="current-amount">Current Savings: $</label>
-        <input type="number" class="currentsavings" id="currentsavings" name="currentsavings" required>
+                <label for="current-amount">Current Savings: $</label>
+                <input type="number" class="currentsavings" id="currentsavings"
+                    name="currentsavings" required>
 
-        <br><br><br>
+                <br><br><br>
 
-        <label for="add-amount">Add Savings: $</label>
-        <input type="number" class="addsavings" id="addsavings" name="addsavings" min=1 required>
+                <label for="add-amount">Add Savings: $</label>
+                <input type="number" class="addsavings" id="addsavings"
+                    name="addsavings" min=1 required>
 
-        <br><br><br>
+                <br><br><br>
 
-        <button type="submit">Update</button>
+                <button type="submit">Update</button>
 
-        <br><br><br>
+                <br><br><br>
 
-        <label for="progress">Goal Completion:</label>
-        <progress class="completionbar" id="completionbar" value="0" max="100"></progress>
+                <label for="progress">Goal Completion:</label>
+                <progress class="completionbar" id="completionbar" value="0"
+                    max="100"></progress>
 
-        <br><br><br>
+                <br><br><br>
 
-    </form>
+            </form>
 
-</div>
+        </div>
 
-</body>
-
+    </body>
 
 </html>

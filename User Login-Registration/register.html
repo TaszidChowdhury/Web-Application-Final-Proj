@@ -9,12 +9,13 @@
 <body>
     <nav>
         <a href="../HomePage/index.html" id="FUNI-logo">
-            <h1>FUNI</h1>
-            <img src="../images/IMG_0049.jpg" alt="FUNI logo">
+            <h1>FUNI</h1><img src="../images/IMG_0049.jpg" alt="FUNI logo">
         </a>
         <div class="nav-links">
-            <a href="../User Login-Registration/register.html">Sign Up</a>
-            <a href="../User Login-Registration/login.html">Log In</a>
+            <a href="../Billing/billing_calculator.html">BUDGET
+                CALCULATOR</a>
+            <a href="../User Login-Registration/register.html">SIGN UP</a>
+            <a href="../User Login-Registration/login.html">LOG IN</a>
         </div>
     </nav>
     <div>
@@ -73,6 +74,26 @@
                 passwordMatchError.style.display = 'none';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var fadeElems = document.querySelectorAll('.registration-signup');
+        
+            function checkFade() {
+                fadeElems.forEach(function (elem) {
+                    var distance = elem.getBoundingClientRect().top;
+                    var windowHeight = window.innerHeight;
+        
+                    if (distance < windowHeight * 0.8) {
+                        elem.classList.add('show');
+                    } else {
+                        elem.classList.remove('show');
+                    }
+                });
+            }
+        
+            checkFade();
+            window.addEventListener('scroll', checkFade);
+        });
     </script>
 </body>
 </html>

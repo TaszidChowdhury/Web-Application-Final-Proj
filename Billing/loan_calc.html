@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Separate Loan and Down Payment Calculator</title>
-<style>
+  <head>
+    <meta charset="UTF-8">
+    <title>Separate Loan and Down Payment Calculator</title>
+    <style>
   body { font-family: Arial, sans-serif; padding: 20px; }
   label, input, button { margin-top: 10px; display: block; width: 300px; }
   input, button { padding: 10px; }
 </style>
-</head>
-<body>
-<h2>Loan and Down Payment Calculator</h2>
-<form id="loanForm">
-  <label for="amount">Loan Amount:</label>
-  <input type="number" id="amount" required>
+  </head>
+  <body>
+    <h2>Loan and Down Payment Calculator</h2>
+    <form id="loanForm">
+      <label for="amount">Loan Amount:</label>
+      <input type="number" id="amount" required>
 
-  <label for="downPayment">Down Payment:</label>
-  <input type="number" id="downPayment" required>
-  <button type="button" onclick="applyDownPayment()">Apply Down Payment</button>
+      <label for="downPayment">Down Payment:</label>
+      <input type="number" id="downPayment" required>
+      <button type="button" onclick="applyDownPayment()">Apply Down
+        Payment</button>
 
-  <label for="interest">Annual Interest Rate (%):</label>
-  <input type="number" id="interest" step="0.01" required>
+      <label for="interest">Annual Interest Rate (%):</label>
+      <input type="number" id="interest" step="0.01" required>
 
-  <label for="years">Loan Term (years):</label>
-  <input type="number" id="years" required>
+      <label for="years">Loan Term (years):</label>
+      <input type="number" id="years" required>
 
-  <button type="button" onclick="calculateLoan()">Calculate Monthly Payment</button>
-</form>
-<p id="adjustedAmount">Adjusted Loan Amount: $0</p>
-<p id="result">Monthly Payment: $0</p>
+      <button type="button" onclick="calculateLoan()">Calculate Monthly
+        Payment</button>
+    </form>
+    <p id="adjustedAmount">Adjusted Loan Amount: $0</p>
+    <p id="result">Monthly Payment: $0</p>
 
-<script>
+    <script>
 function applyDownPayment() {
   var amount = parseFloat(document.getElementById("amount").value);
   var downPayment = parseFloat(document.getElementById("downPayment").value);
@@ -58,5 +60,5 @@ function calculateLoan() {
   }
 }
 </script>
-</body>
+  </body>
 </html>

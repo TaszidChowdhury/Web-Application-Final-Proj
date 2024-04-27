@@ -1,3 +1,10 @@
+body {
+    background-color: #ffffff;
+    font-family: 'San Franciso', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 #FUNI-logo {
     display: flex;
     align-items: center;
@@ -27,8 +34,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: .75rem;
-    background-color: rgba(40, 40, 40, 0.9);
+    background-color: rgba(40, 40, 40, 0.7);
     color: white;
+    font-family:'San Franciso', sans-serif;
 }
 
 nav h1 {
@@ -50,13 +58,6 @@ nav h1 {
     color: #2596be;
 }
 
-body {
-    background-color: ghostwhite;
-    font-family: sans-serif, helvetica;
-    margin: 0;
-    padding: 0;
-}
-
 .registration-login {
     margin-top: 6.5rem;
     height: 43.5rem;
@@ -70,6 +71,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .registration-signup {
@@ -85,26 +88,33 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.registration-login.show,
+.registration-signup.show {
+    opacity: 1;
 }
 
 .registration-login h2 {
     font-size: 2rem;
-    color: whitesmoke;
+    color: #fafafa;
     margin-top: 7rem;
-    font-weight: lighter
+    font-weight: lighter;
 }
 
 .registration-signup h2 {
     font-size: 2rem;
-    color: whitesmoke;
+    color: #fafafa;
     margin-top: 5rem;
-    font-weight: lighter
+    font-weight: lighter;
 }
 
 .registration-login p,
 .registration-signup p {
     font-size: 1rem;
-    color: whitesmoke;
+    color: #fafafa;
     margin-top: 1rem;
     font-weight: lighter;
 }
@@ -161,7 +171,7 @@ body {
 
 a.register-acc,
 a.login-acc {
-    color: white;
+    color: #fafafa;
     text-decoration: underline;
     background-color: transparent;
     padding: 0;
@@ -173,6 +183,7 @@ a.login-acc {
 a.register-acc:hover,
 a.login-acc:hover {
     color: #2596be;
+    transition: all 0.5s ease;
 }
 
 .login-button,
@@ -183,9 +194,9 @@ a.login-acc:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    font-family: sans-serif, helvetica;
+    font-family:'San Franciso', sans-serif;
     background-color: #2596be;
-    color: white;
+    color: #fafafa;
     border: 1px solid black;
     border-radius: 10px;
     font-size: 1.25rem;
@@ -196,7 +207,7 @@ a.login-acc:hover {
 
 .login-button:hover,
 .signup-button:hover {
-    color: white;
+    color: #fafafa;
     background-color: #1a6985;
     cursor: pointer;
     transition: 0.3s ease;
