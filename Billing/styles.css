@@ -25,7 +25,7 @@ body {
 
 #FUNI-logo:hover {
     cursor: pointer;
-    color: #2596be;
+    color: #255d41;
     transition: all 0.8s ease;
 }
 
@@ -34,7 +34,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: .75rem;
-    background-color: rgba(40, 40, 40, 0.7);
+    background-color: rgba(40, 40, 40, 0.55);
     color: white;
     font-family:'San Franciso', sans-serif;
 }
@@ -55,7 +55,7 @@ nav h1 {
 
 .nav-links a:hover {
     text-decoration: underline;
-    color: #2596be;
+    color: #255d41;
 }
 
 .fade-in {
@@ -72,7 +72,7 @@ nav h1 {
 .balance-container {
     margin-top: 1rem;
     opacity: 0;
-    transition: opacity 3.5s ease-in-out;
+    transition: opacity 3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,10 +100,12 @@ nav h1 {
 }
 
 h2 {
-    background-color: #fafafa;
+    background-color: #1e4a34;
+    color: white;
     width: 65%;
     padding: 3rem;
     text-align: center;
+    border-radius: 10px;
 }
 
 .period {
@@ -211,7 +213,9 @@ h4 {
 }
 
 .bill-results h4 {
-    background-color: #fafafa;
+    background-color: #3b6d54;
+    border-radius: 8px;
+    color: white;
     width: 50vw;
     padding: 1.5rem;
     text-align: center;
