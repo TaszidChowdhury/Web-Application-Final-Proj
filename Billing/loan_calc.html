@@ -36,7 +36,7 @@ function applyDownPayment() {
   var downPayment = parseFloat(document.getElementById("downPayment").value);
   var adjustedAmount = amount - downPayment;
 
-  if (adjustedAmount >= 0) {
+  if (adjustedAmount >= 0) { 
     document.getElementById("adjustedAmount").innerHTML = "Adjusted Loan Amount: $" + adjustedAmount.toFixed(2);
   } else {
     document.getElementById("adjustedAmount").innerHTML = "Down payment exceeds loan amount.";

@@ -6,7 +6,7 @@ document.getElementById('incomeType').addEventListener('change', function() {
     if (incomeType === 'hourly') {
         hoursPerWeekField.style.display = 'block';
         labelHoursPerWeek.style.display = 'block';
-    } else {
+    } else { 
         hoursPerWeekField.style.display = 'none';
         labelHoursPerWeek.style.display = 'none';
     }
