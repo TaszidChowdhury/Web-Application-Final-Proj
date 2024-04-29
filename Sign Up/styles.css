@@ -58,26 +58,9 @@ nav h1 {
     color: #255d41;
 }
 
-.registration-login {
-    margin-top: 6.5rem;
-    height: 43.5rem;
-    width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    background-color: #1e4a34;
-    overflow: hidden;
-    box-shadow: 0 0 10px 0 #969595;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
 .registration-signup {
     margin-top: 6.5rem;
-    height: 58rem;
+    height: 48rem;
     width: 40rem;
     margin-left: auto;
     margin-right: auto;
@@ -92,16 +75,8 @@ nav h1 {
     transition: opacity 1.5s ease-in-out;
 }
 
-.registration-login.show,
 .registration-signup.show {
     opacity: 1;
-}
-
-.registration-login h2 {
-    font-size: 2rem;
-    color: #fafafa;
-    margin-top: 7rem;
-    font-weight: lighter;
 }
 
 .registration-signup h2 {
@@ -111,7 +86,6 @@ nav h1 {
     font-weight: lighter;
 }
 
-.registration-login p,
 .registration-signup p {
     font-size: 1rem;
     color: #fafafa;
@@ -119,29 +93,21 @@ nav h1 {
     font-weight: lighter;
 }
 
-.registration-login input,
 .registration-signup input {
     width: 75%;
     padding: .75rem;
     margin: 3rem auto;
     border-radius: 10px;
-
     border: 1px solid black;
     transition: border-color 0.3s ease;
 }
 
-.registration-login input:focus,
-.registration-signup input:focus {
-    border-color: #2596be;
+.registration-signup input:hover {
+    border: 1px solid #2596be;
 }
 
-.registration-login .username-login,
 .registration-signup .username-signup,
-.registration-login .password-login,
 .registration-signup .password-signup,
-.registration-login .confirm-password,
-.registration-signup .confirm-password,
-.registration-login .email,
 .registration-signup .email {
     position: relative;
     font-size: 1.25rem;
@@ -149,7 +115,6 @@ nav h1 {
     flex-direction: column;
 }
 
-.registration-login label,
 .registration-signup label {
     position: absolute;
     left: 2rem;
@@ -161,15 +126,12 @@ nav h1 {
     padding: 0 0.5rem;
 }
 
-.registration-login input:focus + label,
-.registration-login input:not(:placeholder-shown) + label,
 .registration-signup input:focus + label,
 .registration-signup input:not(:placeholder-shown) + label {
     font-size: 1.5rem;
     color: #ffffff;
 }
 
-a.register-acc,
 a.login-acc {
     color: #fafafa;
     text-decoration: underline;
@@ -180,13 +142,11 @@ a.login-acc {
     font-size: 1rem;
 }
 
-a.register-acc:hover,
 a.login-acc:hover {
     color: #a2a2a2;
     transition: all 0.5s ease;
 }
 
-.login-button,
 .signup-button {
     display: flex;
     justify-content: center;
@@ -205,7 +165,6 @@ a.login-acc:hover {
     transition: 0.3s ease;
 }
 
-.login-button:hover,
 .signup-button:hover {
     color: #fafafa;
     background-color: #7a7a7a;
