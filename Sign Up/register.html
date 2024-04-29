@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="log-reg.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -14,8 +14,8 @@
         <div class="nav-links">
             <a href="../Billing/billing_calculator.html">BUDGET
                 CALCULATOR</a>
-            <a href="../User Login-Registration/register.html">SIGN UP</a>
-            <a href="../User Login-Registration/login.html">LOG IN</a>
+            <a href="../Sign Up/register.html">SIGN UP</a>
+            <a href="../Login/login.html">LOG IN</a>
         </div>
     </nav>
     <div>
@@ -44,37 +44,14 @@
                         required>
                     <label for="psw">Password</label>
                 </div>
-                <div class="confirm-password">
-                    <input type="password" placeholder=" "
-                        id="confirm-password"
-                        name="confirm-psw" minlength="8" maxlength="24"
-                        pattern="^(?=.*[A-Z])(?=.*\d)(?!.*\s).{8,24}$"
-                        required
-                        oninput="CheckPasswordMatch()">
-                    <label for="confirm-psw">Confirm Password</label>
-                    <p class="password-match-error" id="password-match-error" style="color: red; display: none;">Passwords Do Not Match</p>
-                </div>
                 <p>Have an account?&#160<a
-                    href="../User Login-Registration/login.html"
+                    href="../Login/login.html"
                     class="login-acc">Click here to sign in!</a></p>
                 <button class="signup-button" type="submit">Register</button>
             </div>
         </form>
     </div>
     <script>
-        function CheckPasswordMatch() {
-            var password = document.getElementById('password').value;
-            var confirmPassword = document.getElementById('confirm-password').value;
-            var passwordMatchError = document.getElementById('password-match-error');
-
-            if (password !== confirmPassword){
-                passwordMatchError.style.display = 'block';
-            } 
-            else{
-                passwordMatchError.style.display = 'none';
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', function () {
             var fadeElems = document.querySelectorAll('.registration-signup');
         
