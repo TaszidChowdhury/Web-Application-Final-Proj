@@ -1,40 +1,46 @@
-body{
-    background-image: url('background.jpg');
-    background-repeat: repeat;
-    background-size: 15%;
-    
+body {
+    background-color: #1e4a34;
 }
-div{
+.container {
     font-family: sans-serif, helvetica;
     font-size: 18px;
     color: whitesmoke;
-    background-color: #454141;
+    background-color: #969595;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
-    padding: 2px;
+    padding: 1.2px;
     border-radius: 10px;
     width: 31rem;
-    box-shadow: #454141 0px 54px 55px, #454141 0px -12px 30px, #454141 0px 4px 6px,  #454141 0px 12px 13px, #454141 0px -3px 5px;
-
 }
-h1{
+.form-group{
+    padding: 2.5rem;
+}
+h1 {
     font-size: 38px;
     font-weight: 450;
     margin-top: 60px;
-    transition: color 1.1s;
-    transition: scale 1.1s;
+    transition: color 1.1s, transform 1.1s; 
 }
-h1:hover{
-    color: #2596be;
-    scale: 1.1;
+h1:hover {
+    color: #1e4a34;
+    transform: scale(1.1);
 }
-.completionbar{
+.completionbar {
     margin-top: 20px;
     width: 100%;
     height: 20px;
     background-color: whitesmoke;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: -30px;
+}
+.sub-button {
+    background-color: grey;
+    color: whitesmoke;
+    margin-top: 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 22px;
 }
