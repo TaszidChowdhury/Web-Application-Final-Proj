@@ -14,14 +14,14 @@
                 <h1>FUNI</h1><img src="../images/IMG_0049.jpg" alt="FUNI logo">
             </a>
             <div class="nav-links">
-                <a href="../Billing/billing_calculator.html">BUDGET
+                <a href="../Billing/budget_calc.html">BUDGET
                     CALCULATOR</a>
                 <a href="../Sign Up/register.html">SIGN UP</a>
                 <a href="../Login/login.html">LOG IN</a>
             </div>
         </nav>
         <div class="budgeting">
-            <h2 class="fade-in">Budget Calculator</h2>
+            <h2 class="fade-in">BUDGET CALCULATOR</h2>
             <div class="balance-container">
                 <h3>Enter your budget and bills to calculate your remaining
                     budget for the period</h3>
@@ -50,9 +50,9 @@
                             onclick="calculateBudget()">Calculate</button>
                     </div>
                 </div>
-                <div class="bill-results-container">
+                <div>
+                    <h4 class="border-result">RESULTS</h4>
                     <div class="bill-results">
-                        <h4>Results:</h4>
                         <p>Total Bills for the period: <b>$</b><span
                                 id="totalBills">0</span></p>
                         <p>Remaining Budget for the period: <b>$</b><span
@@ -96,7 +96,6 @@
             }
             
             function calculateBudget() {
-                const period = document.getElementById('periodSelect').value;
                 const budget = parseFloat(document.getElementById('budgetInput').value);
                 const amounts = document.querySelectorAll('.bill-amount');
                 let totalBills = 0;
@@ -115,7 +114,7 @@
                 confetti({
                     particleCount: 100,
                     spread: 85,
-                    origin: { y: 0.5 }
+                    origin: { y: 0.55 }
                 });
 
                 setTimeout(function() {

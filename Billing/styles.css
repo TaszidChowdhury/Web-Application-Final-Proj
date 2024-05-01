@@ -34,7 +34,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: .75rem;
-    background-color: rgba(40, 40, 40, 0.55);
+    background-color: rgb(145, 145, 145);
     color: white;
     font-family:'San Franciso', sans-serif;
 }
@@ -76,7 +76,19 @@ nav h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;  
+    border: 2px solid #f3f3f3;
+    width: 58.5vw;
+    margin-top: -3rem;
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+    border-top: none;
+    border-radius: 5px 5px 10px 10px; 
+    background-color: #f7f7f7;
+}
+
+.border-container h2 {
+    background-color: transparent;
 }
 
 .budgeting {
@@ -92,7 +104,7 @@ nav h1 {
 
 .budgeting h2:hover {
     transition: all .5s ease;
-    transform: scale(1.07);
+    transform: scale(1.01);
 }
 
 .budgeting h3 {
@@ -102,33 +114,15 @@ nav h1 {
 h2 {
     background-color: #1e4a34;
     color: white;
-    width: 65%;
+    width: 55%;
     padding: 3rem;
     text-align: center;
     border-radius: 10px;
 }
 
-.period {
-    font-size: 1.15rem;
-}
-
-#periodSelect {
-    padding: 0.25rem;
-    font-size: 1rem;
-    border: 1px solid #c8c8c8;
-    border-radius: 10px;
-    background-color: #fafafa;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-#periodSelect:hover {
-    transform: scale(1.1);
-    border-color: #2596be;
-}
-
 .budget {
     font-size: 1.15rem;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 #budgetInput {
@@ -146,7 +140,7 @@ h2 {
 }
 
 .bill-entry input {
-    padding: 0.25rem;
+    padding: 0.35rem;
     font-size: 1rem;
     border: 1px solid #c8c8c8;
     border-radius: 10px;
@@ -168,6 +162,7 @@ h2 {
     border-radius: 10px;
     background-color: #fafafa;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 #billContainer button:hover {
@@ -177,19 +172,18 @@ h2 {
 }
 
 h4 {
-    margin-top: 4rem;
-    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    font-size: 1.75rem;
 }
 
 .bill-entry {
-    margin-top: .5rem;
     opacity: 0;
     height: 0;
     transition: opacity .75s ease, height 1s ease;
 }
 
 .bill-entry-wrapper {
-    margin-top: -1rem;
+    margin-top: .5rem;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
@@ -208,23 +202,31 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 1.15rem;
-    margin: auto;
+    font-size: 1.65rem;
+    border: 2px solid #fafafa;
+    border-top: none;
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+    margin-top: -2.3rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-weight: bold;
 }
 
-.bill-results h4 {
+.border-result {
     background-color: #3b6d54;
     border-radius: 8px;
     color: white;
     width: 50vw;
     padding: 1.5rem;
     text-align: center;
-    margin-bottom: -.1rem;
 }
 
-.bill-results h4:hover {
+.border-result:hover {
     transition: all .5s ease;
-    transform: scale(1.07);
+    transform: scale(1.02);
 }
 
 #totalBills,
@@ -236,6 +238,7 @@ h4 {
 
 #totalBills:hover,
 #remainingBudget:hover {
-    color:#2596be;
+    color:#3b6d54;
     cursor:default;
 }
+
