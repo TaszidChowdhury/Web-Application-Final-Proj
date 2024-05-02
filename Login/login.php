@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../Database/database.php";
 if (isset($_POST['username']) && isset($_POST['psw'])) {
     function validate($data)
@@ -16,6 +17,7 @@ if (isset($_POST['username']) && isset($_POST['psw'])) {
     } else if (empty($pass)) {
         header("Location: index.php?error=Password is required");
     } else {
+        $pass = md5($pass);
         $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
         $result = mysqli_query($conn, $sql);
 
@@ -25,7 +27,6 @@ if (isset($_POST['username']) && isset($_POST['psw'])) {
                 $_SESSION['user_name'] = $row['user_name'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['id'] = $row['id'];
-                $_SESSION['balance'] = $row['balance'];
                 header("Location: ../MainPage/index.php");
                 exit();
             } else {
