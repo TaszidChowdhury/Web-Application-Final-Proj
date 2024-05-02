@@ -10,15 +10,29 @@
     </head>
     <body>
         <nav>
-            <a href="../HomePage/index.html" id="FUNI-logo">
-                <h1>FUNI</h1><img src="../images/IMG_0049.jpg" alt="FUNI logo">
-            </a>
-            <div class="nav-links">
-                <a href="../Billing/budget_calc.html">BUDGET
-                    CALCULATOR</a>
-                <a href="../Sign Up/register.html">SIGN UP</a>
-                <a href="../Login/login.html">LOG IN</a>
-            </div>
+            <a href="../HomePage/home.html" id="FUNI-logo"><h1>FUNI</h1><img
+                    src="../images/IMG_0049.jpg" alt="FUNI logo"></a>
+            <ul>
+                <li><a href="../Calendar/calendar.html">CALENDAR</a></li>
+                <li><a href="../GoalTracker/goal.html">GOAL TRACKER</a></li>
+                <li class="dropdown">CALCULATORS
+                    <div class="dropdown-content">
+                        <a href="../Billing/budget_calc.html">BUDGET
+                            CALCULATOR</a>
+                        <a href="../Salary Calc/salary_calc.html">SALARY
+                            CALCULATOR</a>
+                        <a href="../Loan Calc/loan_calc.html">LOAN
+                            CALCULATOR</a>
+                    </div>
+                </li>
+                <li class="dropdown">USERNAME
+                    <div class="dropdown-content">
+                        <a href="#">EDIT PROFILE</a>
+                        <a href="#">OPTIONS</a>
+                        <button id="signOut">LOGOUT</button>
+                    </div>
+                </li>
+            </ul>
         </nav>
         <div class="budgeting">
             <h2 class="fade-in">BUDGET CALCULATOR</h2>
@@ -50,7 +64,7 @@
                             onclick="calculateBudget()">Calculate</button>
                     </div>
                 </div>
-                
+
                 <div>
                     <h4 class="border-result">RESULTS</h4>
                     <div class="bill-results">
@@ -142,6 +156,27 @@
             
                 checkFade();
                 window.addEventListener('scroll', checkFade);
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var dropdown = document.querySelector('.dropdown');
+                var dropdownContent = document.querySelector('.dropdown-content');
+    
+                dropdown.addEventListener('mouseenter', function() {
+                    dropdownContent.style.display = 'block';
+                });
+    
+                dropdown.addEventListener('mouseleave', function() {
+                    dropdownContent.style.display = 'none';
+                });
+    
+                dropdownContent.addEventListener('mouseenter', function() {
+                    dropdownContent.style.display = 'block';
+                });
+    
+                dropdownContent.addEventListener('mouseleave', function() {
+                    dropdownContent.style.display = 'none';
+                });
             });
         </script>
     </body>

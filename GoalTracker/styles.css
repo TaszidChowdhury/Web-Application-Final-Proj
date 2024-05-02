@@ -1,6 +1,119 @@
 body {
-    background-color: #1e4a34;
+    background-color: #ffffff;
+    font-family: 'San Franciso', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+#FUNI-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+#FUNI-logo h1 {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    order: 2;
+}
+
+#FUNI-logo img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    order: 1;
+}
+
+#FUNI-logo:hover {
+    cursor: pointer;
+    color: #4a9973;
+    transition: all 0.8s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: .75rem 2rem;
+    background-color: #0c1e15;
+    color: white;
+    font-family:'San Franciso', sans-serif;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ul li {
+    margin-left: 3.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: #2596be;
+    transition: all 0.5s ease;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #2596be;
+    transition: all 0.5s ease;
+}
+
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    background-color: #c8c8c8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.4);
+    z-index: 1;
+    top: 4%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#signOut {
+    display: inline-block;
+    text-align: center;
+    padding: 0.25rem;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    color: white;
+}
+
+#signOut:hover {
+    cursor: pointer;
+    color: #8c8c8c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    cursor: pointer;
+    background-color: #8c8c8c;
+}
+
 .container {
     font-family: sans-serif, helvetica;
     font-size: 18px;
