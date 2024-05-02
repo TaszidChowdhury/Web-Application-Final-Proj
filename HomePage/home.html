@@ -86,7 +86,6 @@
     </div>
     <script>
         var slide_index = 0;
-        showSlides();
         function plusSlides(n) {
             showSlides(slide_index += n);
         }
@@ -103,6 +102,7 @@
             slides[slide_index - 1].style.display = "block";
             setTimeout(showSlides, 3750);
         }
+        showSlides();
     </script>
 </body>
 

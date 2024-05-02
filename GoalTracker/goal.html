@@ -88,7 +88,7 @@
                     alert(goal <= 0 ? "Enter a goal greater than zero." : "Goal must be above the current savings amount.");
                     return;
                 }
-                if (percent >= 100) {
+                if (percent >= 100){
                     currentgoal.value = 0;
                     progressbar.value = 0;
                     const date = new Date().toLocaleString();
@@ -103,17 +103,17 @@
                 currentsavings.value = total;
             });
     
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function (){
                     var fadeElems = document.querySelectorAll('h2, .goal-content');
                 
-                    function checkFade() {
-                        fadeElems.forEach(function (elem) {
+                    function checkFade(){
+                        fadeElems.forEach(function(elem){
                             var distance = elem.getBoundingClientRect().top;
                             var windowHeight = window.innerHeight;
                 
-                            if (distance < windowHeight * 0.8) {
+                            if (distance < windowHeight * 0.8){
                                 elem.classList.add('show');
-                            } else {
+                            } else{
                                 elem.classList.remove('show');
                             }
                         });

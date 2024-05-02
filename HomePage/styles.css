@@ -119,12 +119,12 @@ p {
     justify-content: center;
 }
 
-.slideshow-container {
+.slideshow-container{
     position: relative;
     max-width: 120rem;
 }
 
-.slides img {
+.slides img{
     width: 120rem;
     height: 65rem; 
     object-fit: contain; 
@@ -137,13 +137,12 @@ p {
 }
 
 .about-us-section{
-    background-color: #ffffff;
-    color: grey;
-    font-size: 1.5rem;
-    font-family: 'San Franciso', sans-serif;
-    color: black;
     width: 90rem;
     height: 23rem;
+    font-size: 1.5rem;
+    font-family: 'San Franciso', sans-serif;
+    background-color: #ffffff;
+    color: black;
     font-weight: bold;
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -151,7 +150,7 @@ p {
     padding-bottom: 15rem;
     }
 
-@keyframes fade-in {
+@keyframes fade-in{
         0% {
             opacity: 0;
         }
