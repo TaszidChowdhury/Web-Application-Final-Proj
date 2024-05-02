@@ -37,7 +37,7 @@ nav {
     padding: .75rem 2rem;
     background-color: #0c1e15;
     color: white;
-    font-family:'San Franciso', sans-serif;
+    font-family: 'San Franciso', sans-serif;
 }
 
 ul {
@@ -76,7 +76,7 @@ a:hover {
     position: absolute;
     font-size: 1rem;
     background-color: #c8c8c8;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.4);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
     z-index: 1;
     top: 4%;
     border-radius: 10px;
@@ -185,8 +185,8 @@ a:hover {
     padding: 0 0.5rem;
 }
 
-.registration-login input:focus + label,
-.registration-login input:not(:placeholder-shown) + label {
+.registration-login input:focus+label,
+.registration-login input:not(:placeholder-shown)+label {
     font-size: 1.5rem;
     color: #383838;
 }
@@ -213,7 +213,7 @@ a.register-acc:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    font-family:'San Franciso', sans-serif;
+    font-family: 'San Franciso', sans-serif;
     background-color: #2596be;
     color: #fafafa;
     border: 1px solid black;
@@ -230,4 +230,13 @@ a.register-acc:hover {
     cursor: pointer;
     transition: 0.3s ease;
     transform: scale(1.2);
+}
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 35%;
+    border-radius: 5px;
+    margin: 20px auto;
 }
