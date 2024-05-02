@@ -1,17 +1,3 @@
-document.getElementById('incomeType').addEventListener('change', function() {
-    const incomeType = document.getElementById('incomeType').value;
-    const hoursPerWeekField = document.getElementById('hoursPerWeek');
-    const labelHoursPerWeek = document.querySelector('label[for="hoursPerWeek"]');
-
-    if (incomeType === 'hourly') {
-        hoursPerWeekField.style.display = 'block';
-        labelHoursPerWeek.style.display = 'block';
-    } else { 
-        hoursPerWeekField.style.display = 'none';
-        labelHoursPerWeek.style.display = 'none';
-    }
-});
-
 function calculateNetIncome() {
     const incomeType = document.getElementById('incomeType').value;
     const amount = parseFloat(document.getElementById('incomeAmount').value);
@@ -33,4 +19,46 @@ function calculateNetIncome() {
     document.getElementById('yearlyIncomeBeforeTaxes').textContent = annualIncome.toFixed(2);
     document.getElementById('weeklyIncomeBeforeTaxes').textContent = weeklyIncomeBeforeTaxes.toFixed(2);
     document.getElementById('weeklyIncomeAfterTaxes').textContent = weeklyIncomeAfterTaxes.toFixed(2);
+
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    function checkFade() {
+        var fadeElems = document.querySelectorAll('.fade-in, .form-container');
+
+        fadeElems.forEach(function (elem) {
+            var distance = elem.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+
+            if (distance < windowHeight * 0.8) {
+                elem.classList.add('show');
+            } else {
+                elem.classList.remove('show');
+            }
+        });
+    }
+    checkFade();
+
+    window.addEventListener('scroll', checkFade);
+
+    document.getElementById('incomeType').addEventListener('change', function() {
+        const incomeType = document.getElementById('incomeType').value;
+        const hoursPerWeekContainer = document.getElementById('hoursPerWeekContainer');
+    
+        if (incomeType === 'hourly') {
+            hoursPerWeekContainer.classList.add('visible');
+            hoursPerWeekContainer.classList.remove('hidden');
+        } else { 
+            hoursPerWeekContainer.classList.add('hidden');
+            hoursPerWeekContainer.classList.remove('visible');
+        }
+    });
+});
+
+
+
