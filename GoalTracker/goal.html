@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,101 +71,24 @@
             </div>
         </div>
         <script>
-=======
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <nav>
-        <a href="../HomePage/home.html" id="FUNI-logo">
-            <h1>FUNI</h1><img src="../images/IMG_0049.jpg" alt="FUNI logo">
-        </a>
-        <ul>
-            <li><a href="../Calendar/calendar.html">CALENDAR</a></li>
-            <li><a href="../GoalTracker/goal.html">GOAL TRACKER</a></li>
-            <li class="dropdown">CALCULATORS
-                <div class="dropdown-content">
-                    <a href="../Billing/budget_calc.html">BUDGET
-                        CALCULATOR</a>
-                    <a href="../Salary Calc/salary_calc.html">SALARY
-                        CALCULATOR</a>
-                    <a href="../Loan Calc/loan_calc.html">LOAN
-                        CALCULATOR</a>
-                </div>
-            </li>
-            <li><a href="../Login/index.php">LOGIN</a></li>
-            <li><a href="../Sign Up/signup.php">SIGN UP</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Savings Goal Tracker</h1>
-        <form>
-            <div class="form-group">
-                <label for="goal-amount">Current Goal: $</label>
-                <input type="number" class="currentgoal" id="currentgoal" name="currentgoal" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label for="current-amount">Current Savings: $</label>
-                <input type="number" class="currentsavings" id="currentsavings" name="currentsavings" step="0.01"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="add-amount">Add Savings: $</label>
-                <input type="number" class="addsavings" id="addsavings" name="addsavings" step="0.01" required>
-            </div>
-            <div class="submit-button">
-                <button class="sub-button" type="submit">Update</button>
-            </div>
-            <div class="form-group">
-                <label for="progress">Goal Completion:</label>
-                <progress class="completionbar" id="completionbar" value="0" max="100"></progress>
-            </div>
-            <div class="completed-goals">
-                <h2>Completed Goals:</h2>
-                <ul class="completed-goals-list">
-                </ul>
-            </div>
-        </form>
-        <script>
-
->>>>>>> 699a0f3afb9bafece8522a75b9c57b084933e631
             const form = document.querySelector('form');
             const currentgoal = document.querySelector('.currentgoal');
             const currentsavings = document.querySelector('.currentsavings');
             const addsavingsfromchecking = document.querySelector('.addsavings');
-<<<<<<< HEAD
             const progressbar = document.querySelector('.completion-bar');
             const completedGoalsList = document.querySelector('.completed-goals-list');
             form.addEventListener('submit', (e)=>{
-=======
-            const progressbar = document.querySelector('.completionbar');
-            const completedGoalsList = document.querySelector('.completed-goals-list');
-            form.addEventListener('submit', (e) => {
->>>>>>> 699a0f3afb9bafece8522a75b9c57b084933e631
                 e.preventDefault();
                 const goal = parseFloat(currentgoal.value);
                 const savings = parseFloat(currentsavings.value);
                 const add = parseFloat(addsavingsfromchecking.value);
                 const total = savings + add;
                 const percent = Math.min((total / goal) * 100, 100);
-<<<<<<< HEAD
-                if (goal <= 0 || goal <= savings){
-                    alert(goal <= 0 ? "Enter a goal greater than zero." : "Goal must be above the current savings amount.");
-                    return;
-                }
-                if (percent >= 100){
-=======
                 if (goal <= 0 || goal <= savings) {
                     alert(goal <= 0 ? "Enter a goal greater than zero." : "Goal must be above the current savings amount.");
                     return;
                 }
                 if (percent >= 100) {
->>>>>>> 699a0f3afb9bafece8522a75b9c57b084933e631
                     currentgoal.value = 0;
                     progressbar.value = 0;
                     const date = new Date().toLocaleString();
@@ -175,16 +97,11 @@
                     li.textContent = `Goal achieved: $${goal} on ${date}`;
                     completedGoalsList.appendChild(li);
                 }
-<<<<<<< HEAD
                 else{
-=======
-                else {
->>>>>>> 699a0f3afb9bafece8522a75b9c57b084933e631
                     progressbar.value = percent;
                 }
                 currentsavings.value = total;
             });
-<<<<<<< HEAD
     
             document.addEventListener('DOMContentLoaded', function () {
                     var fadeElems = document.querySelectorAll('h2, .goal-content');
@@ -207,12 +124,4 @@
                 });
         </script>
     </body>
-=======
-
-        </script>
-
-    </div>
-</body>
-
->>>>>>> 699a0f3afb9bafece8522a75b9c57b084933e631
 </html>
