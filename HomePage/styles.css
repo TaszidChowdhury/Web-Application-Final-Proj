@@ -76,38 +76,32 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 .slideshow-container {
     position: relative;
     max-width: 120rem;
-    position: relative;
 }
 
-.mySlides img {
+.slides img {
     width: 120rem;
     height: 65rem; 
     object-fit: cover; 
     background-origin: padding-box;
-    opacity: 0.85;
+    opacity: 0.50;
 }
 
 .about-us-section{
     background-color: #ffffff;
     color: grey;
-    width: 60rem;
-    height: 20rem;
     font-size: 1.5rem;
     font-family: 'San Franciso', sans-serif;
     color: black;
-    letter-spacing: -1px;
-    font-weight: bolder;
+    margin-top: -1rem;
+    width: 90rem;
+    height: 20rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    word-spacing: 2px;
 }
-
-.about-background{
-    width: 100%;
-    align-items: center;
-}
-
 
