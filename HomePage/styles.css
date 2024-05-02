@@ -83,21 +83,6 @@ a:hover {
     overflow: hidden;
 }
 
-#signOut {
-    display: inline-block;
-    text-align: center;
-    padding: 0.25rem;
-    background-color: transparent;
-    border: none;
-    font-size: inherit;
-    color: white;
-}
-
-#signOut:hover {
-    cursor: pointer;
-    color: #8c8c8c;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -124,6 +109,7 @@ p {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-weight: normal;
 }
 
 .home-page{
@@ -141,9 +127,13 @@ p {
 .slides img {
     width: 120rem;
     height: 65rem; 
-    object-fit: cover; 
+    object-fit: contain; 
     background-origin: padding-box;
-    opacity: 0.50;
+    opacity: 0.85;
+}
+
+.slides img.money{
+    object-fit: cover; 
 }
 
 .about-us-section{
@@ -152,11 +142,24 @@ p {
     font-size: 1.5rem;
     font-family: 'San Franciso', sans-serif;
     color: black;
-    margin-top: -1rem;
     width: 90rem;
-    height: 20rem;
+    height: 23rem;
     font-weight: bold;
     letter-spacing: 2px;
     word-spacing: 2px;
+    animation: fade-in 5s ease-in-out;
+    padding-bottom: 15rem;
+    }
+
+@keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
 }
 
+.description:view-transition{
+        transition: all 0.5s ease;
+    }

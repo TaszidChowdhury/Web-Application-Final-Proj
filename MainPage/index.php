@@ -2,8 +2,7 @@
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
-
-?>
+    ?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -43,40 +42,67 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </nav>
         <div class="home-page">
             <div class="slideshow-container">
-                <div class="mySlides">
-                    <img src="../images/money.jpg" alt="Slide 1">
+                <div class="slides">
+                    <img src="../images/money.jpg" class="money" alt="Money IMG">
                 </div>
-                <div class="mySlides">
-                    <img src="../images/pattern.jpg" alt="Slide 2">
+                <div class="slides">
+                    <img src="../images/Calendar.png" alt="Calendar IMG">
                 </div>
-                <div class="mySlides">
-                    <img src="../images/" alt="Slide 1">
+                <div class="slides">
+                    <img src="../images/SALARYCALC.png" alt="Salary Calculator IMG">
+                </div>
+                <div class="slides">
+                    <img src="../images/LoanCalc.png" alt="Loan Calculator IMG">
+                </div>
+                <div class="slides">
+                    <img src="../images/BudgetCalc.png" alt="Budget Calculator IMG">
+                </div>
+                <div class="slides">
+                    <img src="../images/GoalTracker.png" alt="Goal Tracker IMG">
                 </div>
             </div>
 
             <div class="about-us-section">
-                <h2>
+                <h2 class="about-US">
                     ABOUT US
                 </h2>
                 <div class="description">
                     <p>
-                        What is FUNI? FUNI is an abbreviation for Finance University. Welcome to Financial University, where we empower young adults to take control of their finances with ease and confidence. Our mission is to instill consistency and mindfulness in managing expenses, loans, and budgets. With our intuitive tools, including a dynamic calendar with reminders, budget calculator, loan calculator, salary calculator, and goal tracker, we provide a comprehensive platform to help you stay on track financially. Whether you're navigating student loans, saving for a dream vacation, or planning for the future, our website equips you with the resources and support you need to make informed decisions and achieve your financial goals. Your journey towards financial freedom and stability begins with FUNI.
+                        FUNI, short for Finance University, stands as a beacon
+                        for young adults seeking to master their financial
+                        landscapes with confidence and ease. At Financial
+                        University, our core mission revolves around fostering
+                        consistency and mindfulness in the management of
+                        expenses, loans, and budgets. Through a suite of
+                        intuitive tools, including a dynamic calendar with
+                        reminders, budget calculator, loan calculator, salary
+                        calculator, and goal tracker, we offer a holistic
+                        platform designed to empower individuals in their
+                        financial journeys.
+                    </p>
+                    <p>
+                        Whether you're navigating the complexities of student
+                        loans, saving diligently for a dream vacation, or
+                        diligently planning for the future, FUNI provides the
+                        essential resources and unwavering support needed to
+                        make informed decisions and achieve your financial
+                        aspirations. Embark on your path towards financial
+                        freedom and stability with FUNI—where every step is
+                        guided by knowledge, empowerment, and a commitment to
+                        your success.
                     </p>
                 </div>
             </div>
         </div>
-
         <script>
             var slide_index = 0;
             showSlides();
-
             function plusSlides(n) {
                 showSlides(slide_index += n);
             }
-
             function showSlides() {
                 var i;
-                var slides = document.getElementsByClassName("mySlides");
+                var slides = document.getElementsByClassName("slides");
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
                 }
@@ -85,14 +111,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     slide_index = 1;
                 }
                 slides[slide_index - 1].style.display = "block";
-                setTimeout(showSlides, 4750);
+                setTimeout(showSlides, 3750);
             }
         </script>
-
     </body>
 
     </html>
-<?php
+    <?php
 } else {
     header("Location: ../Login/index.php");
     exit();
