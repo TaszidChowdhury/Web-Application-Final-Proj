@@ -14,25 +14,28 @@ let eventIdCounter = 1;
 
 // Function to add events
 function addEvent() {
-  let date = eventDateInput.value;
+  let dateInput = eventDateInput.value;
   let title = eventTitleInput.value;
   let description = eventDescriptionInput.value;
 
-  if (date && title) {
-    // Create a unique event ID
+  if (dateInput && title) {
+    let date = new Date(dateInput + 'T00:00:00Z');
+
     let eventId = eventIdCounter++;
 
     events.push({
       id: eventId,
-      date: date,
+      date: date.toISOString(),
       title: title,
       description: description,
     });
+
     showCalendar(currentMonth, currentYear);
+    displayReminders();
+    
     eventDateInput.value = "";
     eventTitleInput.value = "";
     eventDescriptionInput.value = "";
-    displayReminders();
   }
 }
 
@@ -116,13 +119,13 @@ let months = [
   "December",
 ];
 let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "Sun",
+  "Mon",
+  "Tues",
+  "Wed",
+  "Thurs",
+  "Fri",
+  "Sat",
 ];
 
 $dataHead = "<tr>";
