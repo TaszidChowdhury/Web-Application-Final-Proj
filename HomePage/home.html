@@ -31,19 +31,31 @@
     </nav>
     <div class="home-page">
     <div class="slideshow-container">
-        <div class="mySlides">
-            <img src="../images/money.jpg" alt="Slide 1">
+        <div class="slides">
+            <img src="../images/money.jpg" alt="Money IMG">
         </div>
-        <div class="mySlides">
-            <img src="../images/pattern.jpg" alt="Slide 2">
+        <div class="slides">
+            <img src="../images/" alt="Calendar IMG">
         </div>
-        <div class="mySlides">
-            <img src="../images/" alt="Slide 1">
+        <div class="slides">
+            <img src="../images/" alt="Salary Calculator IMG">
+        </div>
+        <div class="slides">
+            <img src="../images/" alt="Loan Calculator IMG">
+        </div>
+        <div class="slides">
+            <img src="../images/" alt="Budget Calculator IMG">
+        </div>
+        <div class="slides">
+            <img src="../images/" alt="Goal Tracker IMG">
+        </div>
+        <div class="slides">
+            <img src="../images/" alt="">
         </div>
     </div>
 
     <div class="about-us-section">
-        <h2>
+        <h2 class="about-US">
             ABOUT US
         </h2>
         <div class="description">
@@ -62,7 +74,7 @@
         }
         function showSlides(){
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName("slides");
             for (i = 0; i < slides.length; i++){
                 slides[i].style.display = "none";
             }
