@@ -70,27 +70,31 @@
       }
       
       function calculateLoan() {
-        var adjustedAmount = parseFloat(document.getElementById("adjustedAmount").textContent.split('$')[1]);
+        var amount = parseFloat(document.getElementById("amount").value);
+        var downPayment = parseFloat(document.getElementById("downPaymentInput").value);
+        var adjustedAmount = amount - downPayment;
+      
+        if (isNaN(downPayment)) {
+          adjustedAmount = amount;
+        }
+      
         var interest = parseFloat(document.getElementById("interest").value) / 100 / 12;
         var years = parseFloat(document.getElementById("years").value) * 12;
       
         var x = Math.pow(1 + interest, years);
         var monthly = (adjustedAmount * x * interest) / (x - 1);
       
-        if (!isNaN(monthly) && (monthly != Infinity) && (monthly > 0)) {
+        if (!isNaN(monthly) && isFinite(monthly) && monthly > 0) {
           var adjestedResultFormatted = "<b>$" + monthly.toFixed(2) + "</b>";
           document.getElementById("result").innerHTML = "Monthly Payment: " + adjestedResultFormatted;
-        } else {
-          document.getElementById("result").innerHTML = "Please check your numbers or apply down payment.";
-        }
       
         confetti({
           particleCount: 100,
           spread: 65,
           origin: { y: 0.65 }
-      });
+        });
       }
-      
+      }
       document.addEventListener('DOMContentLoaded', function () {
         var fadeElems = document.querySelectorAll('.loan-form-container');
       
