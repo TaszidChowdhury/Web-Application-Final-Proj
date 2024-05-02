@@ -255,3 +255,23 @@ function daysInMonth(iMonth, iYear) {
 
 // Call the showCalendar function initially to display the calendar
 showCalendar(currentMonth, currentYear);
+
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeElems = document.querySelectorAll('h2, .container-calendar');
+
+  function checkFade() {
+      fadeElems.forEach(function (elem) {
+          var distance = elem.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+
+          if (distance < windowHeight * 0.8) {
+              elem.classList.add('show');
+          } else {
+              elem.classList.remove('show');
+          }
+      });
+  }
+
+  checkFade();
+  window.addEventListener('scroll', checkFade);
+});

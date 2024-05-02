@@ -89,7 +89,6 @@ a:hover {
     overflow: hidden;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -115,6 +114,12 @@ h2 {
     text-align: center;
     border-radius: 10px;
     font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+}
+
+h2.show {
+    opacity: 1;
 }
 
 h2:hover {
@@ -123,7 +128,6 @@ h2:hover {
 }
 
 #top {
-    transition: opacity 3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,7 +222,6 @@ h3 {
 }
 
 #bottom {
-    transition: opacity 3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +252,6 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: opacity 3s ease-in-out; 
     border: 1px solid #f3f3f3;
     background-color: #fafafa;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
@@ -306,6 +308,15 @@ h3 {
     text-align: center;
     border-radius: 10px;
     font-size: 2rem;
+}
+
+.container-calendar {
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
+}
+
+.container-calendar.show {
+    opacity: 1;
 }
 
 .wrapper .container-calendar {
