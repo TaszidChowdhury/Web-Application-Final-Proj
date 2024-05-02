@@ -99,46 +99,126 @@ a:hover {
     background-color: #8c8c8c;
 }
 
-.container {
-    font-family: sans-serif, helvetica;
-    font-size: 18px;
-    color: whitesmoke;
-    background-color: #969595;
+.goal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    background-color: #1e4a34;
+    color: white;
+    width: 25%;
+    margin-top: 2.5rem;
+    padding: 3rem;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-    padding: 1.2px;
     border-radius: 10px;
-    width: 31rem;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
 }
-.form-group{
-    padding: 2.5rem;
+
+h2:hover {
+    transition: all .5s ease;
+    transform: scale(1.03);
 }
-h1 {
-    font-size: 38px;
-    font-weight: 450;
-    margin-top: 60px;
-    transition: color 1.1s, transform 1.1s; 
+
+h2.show {
+    opacity: 1;
 }
-h1:hover {
-    color: #1e4a34;
-    transform: scale(1.1);
+
+.goal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -1.2rem;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    border: 2px solid #f3f3f3;
+    width: 28.5%;
+    padding-bottom: 2.5rem;
+    border-top: none;
+    border-radius: 5px 5px 10px 10px; 
+    background-color: #f7f7f7;
+    transition: opacity 3s ease-in-out;
+    font-weight: bold;
+    font-size: 1.35rem;
 }
-.completionbar {
-    margin-top: 20px;
-    width: 100%;
-    height: 20px;
-    background-color: whitesmoke;
+
+.goal-content.show {
+    opacity: 1;
+}
+
+.form-group, 
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.submit-button button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #c8c8c8;
     border-radius: 10px;
-    margin-bottom: -30px;
+    background-color: #2596be;
+    color: white;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
-.sub-button {
-    background-color: grey;
-    color: whitesmoke;
-    margin-top: 20px;
-    font-size: 15px;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 22px;
+
+.submit-button button:hover {
+    border-color: #1e7898;
+    transform: scale(1.03);
+    cursor: pointer;
 }
+
+.goal-content input {
+    padding: 0.35rem;
+    font-size: 1rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    background-color: #fafafa;
+    margin-right: .5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.goal-content input:hover {
+    border-color: #2596be;
+    transform: scale(1.02);
+
+}
+
+.completion-bar {
+    margin-top: 1rem;
+    width: 25rem;
+    background-color: #8c8c8c;
+    border-radius: 10px;
+    color: #80efb8;
+}
+
+.completed-goals{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+.completed-goals-list {
+    margin-top: -1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    font-weight: normal;
+    padding: 0;
+}
+
