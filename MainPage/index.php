@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -97,9 +97,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <script>
             var slide_index = 0;
             showSlides();
+
             function plusSlides(n) {
                 showSlides(slide_index += n);
             }
+
             function showSlides() {
                 var i;
                 var slides = document.getElementsByClassName("slides");
@@ -117,9 +119,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </body>
 
     </html>
-    <?php
+<?php
 } else {
-    header("Location: ../Login/index.php");
+    header("Location: ../Login/log.php");
     exit();
 }
 ?>

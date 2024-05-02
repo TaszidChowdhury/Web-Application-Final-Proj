@@ -32,7 +32,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             CALCULATOR</a>
                     </div>
                 </li>
-                <li><a href="../Login/index.php">LOGIN</a></li>
+                <li><a href="../Login/log.php">LOGIN</a></li>
                 <li><a href="../Sign Up/signup.php">SIGN UP</a></li>
             </ul>
         </nav>
@@ -83,7 +83,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </html>
 <?php
 } else {
-    header("Location: ../Login/index.php");
+    header("Location: ../Login/log.php");
     exit();
 }
 ?>

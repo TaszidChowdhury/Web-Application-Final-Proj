@@ -108,7 +108,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </html>
 <?php
 } else {
-    header("Location: ../Login/index.php");
+    header("Location: ../Login/log.php");
     exit();
 }
 ?>

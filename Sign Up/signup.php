@@ -26,7 +26,7 @@
                         CALCULATOR</a>
                 </div>
             </li>
-            <li><a href="../Login/index.php">LOGIN</a></li>
+            <li><a href="../Login/log.php">LOGIN</a></li>
             <li><a href="../Sign Up/signup.php">SIGN UP</a></li>
         </ul>
     </nav>
@@ -72,7 +72,7 @@
                     <?php } ?>
                     <label for="repsw">Confirm Password</label>
                 </div>
-                <p>Have an account?&#160<a href="../Login/index.php" class="login-acc">Click here to sign in!</a></p>
+                <p>Have an account?&#160<a href="../Login/log.php" class="login-acc">Click here to sign in!</a></p>
                 <button class="signup-button" type="submit">Register</button>
             </div>
         </form>
