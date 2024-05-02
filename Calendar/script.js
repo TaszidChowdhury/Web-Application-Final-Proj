@@ -19,7 +19,7 @@ function addEvent() {
   let description = eventDescriptionInput.value;
 
   if (dateInput && title) {
-    let date = new Date(dateInput + 'T00:00:00Z');
+    let date = new Date(dateInput + "T00:00:00Z");
 
     let eventId = eventIdCounter++;
 
@@ -32,7 +32,7 @@ function addEvent() {
 
     showCalendar(currentMonth, currentYear);
     displayReminders();
-    
+
     eventDateInput.value = "";
     eventTitleInput.value = "";
     eventDescriptionInput.value = "";
@@ -118,15 +118,7 @@ let months = [
   "November",
   "December",
 ];
-let days = [
-  "Sun",
-  "Mon",
-  "Tues",
-  "Wed",
-  "Thurs",
-  "Fri",
-  "Sat",
-];
+let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
 $dataHead = "<tr>";
 for (dhead in days) {
@@ -256,22 +248,22 @@ function daysInMonth(iMonth, iYear) {
 // Call the showCalendar function initially to display the calendar
 showCalendar(currentMonth, currentYear);
 
-document.addEventListener('DOMContentLoaded', function () {
-  var fadeElems = document.querySelectorAll('h2, .container-calendar');
+document.addEventListener("DOMContentLoaded", function () {
+  var fadeElems = document.querySelectorAll("h2, .container-calendar");
 
   function checkFade() {
-      fadeElems.forEach(function (elem) {
-          var distance = elem.getBoundingClientRect().top;
-          var windowHeight = window.innerHeight;
+    fadeElems.forEach(function (elem) {
+      var distance = elem.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
 
-          if (distance < windowHeight * 0.8) {
-              elem.classList.add('show');
-          } else {
-              elem.classList.remove('show');
-          }
-      });
+      if (distance < windowHeight * 0.8) {
+        elem.classList.add("show");
+      } else {
+        elem.classList.remove("show");
+      }
+    });
   }
 
   checkFade();
-  window.addEventListener('scroll', checkFade);
+  window.addEventListener("scroll", checkFade);
 });

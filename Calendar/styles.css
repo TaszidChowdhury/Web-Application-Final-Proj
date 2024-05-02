@@ -43,7 +43,7 @@ nav {
     padding: .75rem 2rem;
     background-color: #0c1e15;
     color: white;
-    font-family:'San Franciso', sans-serif;
+    font-family: 'San Franciso', sans-serif;
 }
 
 ul {
@@ -82,7 +82,7 @@ a:hover {
     position: absolute;
     font-size: 1rem;
     background-color: #c8c8c8;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.4);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
     z-index: 1;
     top: 4%;
     border-radius: 10px;
@@ -131,8 +131,8 @@ h2:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    margin: 0 auto; 
+    flex-direction: column;
+    margin: 0 auto;
     border: 2px solid #f3f3f3;
     width: 95%;
     margin-top: 0rem;
@@ -140,7 +140,7 @@ h2:hover {
     padding-bottom: 3rem;
     border-top: none;
     border-bottom: none;
-    border-radius: 5px 5px 0px 0px; 
+    border-radius: 5px 5px 0px 0px;
     background-color: #f7f7f7;
 }
 
@@ -148,8 +148,8 @@ h2:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    margin: 0 auto; 
+    flex-direction: column;
+    margin: 0 auto;
     background-color: white;
     border: 1px solid #f3f3f3;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
@@ -166,8 +166,8 @@ h3 {
 }
 
 
-#previous, 
-#next{
+#previous,
+#next {
     padding: .75rem;
     font-size: 1rem;
     margin: .5rem 1.25rem;
@@ -196,9 +196,9 @@ h3 {
 }
 
 .table-calendar td {
-   width: calc(100% / 7);
-   text-align: center;
-   padding: 2.25rem;
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 2.25rem;
 }
 
 .footer-container-calendar {
@@ -225,14 +225,14 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    margin: 0 auto; 
+    flex-direction: column;
+    margin: 0 auto;
     border: 2px solid #f3f3f3;
     width: 95%;
-  
+
     padding-bottom: 5rem;
     border-top: none;
-    border-radius: 0px 0px 10px 10px; 
+    border-radius: 0px 0px 10px 10px;
     background-color: #f7f7f7;
 }
 
@@ -259,7 +259,7 @@ h3 {
     width: 75%;
     padding-bottom: 5rem;
     border-top: none;
-    border-radius: 5px 5px 10px 10px; 
+    border-radius: 5px 5px 10px 10px;
 }
 
 .botton-container input {
@@ -282,13 +282,14 @@ h3 {
 
 .botton-container button {
     margin: 2.4rem;
-    padding: 0.75rem 2rem;;
+    padding: 0.75rem 2rem;
+    ;
     font-size: 1rem;
     border: 1px solid #c8c8c8;
     border-radius: 10px;
     background-color: #2596be;
     color: white;
-    
+
 }
 
 .botton-container button:hover {

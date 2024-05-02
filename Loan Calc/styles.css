@@ -83,6 +83,21 @@ a:hover {
     overflow: hidden;
 }
 
+#signOut {
+    display: inline-block;
+    text-align: center;
+    padding: 0.25rem;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    color: white;
+}
+
+#signOut:hover {
+    cursor: pointer;
+    color: #8c8c8c;
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -143,7 +158,6 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-weight: bold;
 }
 
 input { 
