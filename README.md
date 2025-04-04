@@ -207,11 +207,12 @@ Web-Application-Final-Proj-main/
 
 ## 👨‍💻 Author
 
-Developed by **Taszid Chowdhury**  
-Student Developer | Web and Security Enthusiast
+Developed by **Taszid Chowdhury** **Arbid Chowdhury** **MD Hossain** **Mir Khair**
+Student Developer | Stockton University
 
 ---
 
 ## 📬 Contact
 
 Questions or feedback? Reach out via GitHub or email.
+
