@@ -208,7 +208,7 @@ Web-Application-Final-Proj-main/
 ## 👨‍💻 Author
 
 Developed by **Taszid Chowdhury** **Arbid Chowdhury** **MD Hossain** **Mir Khair**
-Student Developer | Stockton University
+| Student Developer | Stockton University
 
 ---
 
